@@ -1,19 +1,17 @@
-pipeline{
-
+pipeline
+{
     agent any
-
 // uncomment the following lines by removing /* and */ to enable
-/*    tools{
+    tools{
        maven 'maven' 
     }
-*/    
-
+    
     stages{
         stage('build'){
             steps{
                 echo 'this is the build job'
                 sh 'mvn compile'
-               }
+            }
         }
         stage('test'){
             steps{
